@@ -1,0 +1,16 @@
+/*table {*/
+    /*white-space: nowrap;*/
+/*}*/
+
+/*table td, table th {*/
+    /*white-space: nowrap;*/
+/*}*/
+.o_list_text {
+    white-space: pre-wrap;
+    /*min-width: 400px;*/
+}
+
+.table-sm th,
+.table-sm td {
+    white-space: nowrap;
+}

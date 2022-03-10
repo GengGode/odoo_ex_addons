@@ -1,0 +1,1442 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend" name="odoo menu assets">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/css" href="/codev2/static/src/css/codev2.css"/>
+        </xpath>
+    </template>
+
+
+    <record id="view_from_ic_rules" model="ir.ui.view">
+        <field name="name">ic.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">ic.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <!--<header>-->
+                    <!--<button name="button_click" string="编码生成" type="object" class="highlight" attrs='{"invisible": [("active", "=", True)]}'/>-->
+                <!--</header>-->
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible="1" />
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                    </group>
+                    <group>
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                        <field name="file_1" filename="filename_1" />
+                        <field name="filename_1" invisible="1" />
+                    </group>
+                    <notebook colspan="3">
+                        <page string="关联字段" name="ic_ids">
+                            <field name="ic_ids" >
+                                <field name="ware_id" />
+                            </field>
+                        </page>
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_ic_rules" model="ir.ui.view">
+        <field name="name">ic.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">ic.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_frequency_rules" model="ir.ui.view">
+        <field name="name">frequency.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">frequency.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                    </group>
+                    <group>
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_frequency_rules" model="ir.ui.view">
+        <field name="name">frequency.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">frequency.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_semiconductor_rules" model="ir.ui.view">
+        <field name="name">semiconductor.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">semiconductor.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                    </group>
+                    <group>
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="attr_v19" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_semiconductor_rules" model="ir.ui.view">
+        <field name="name">semiconductor.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">semiconductor.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_transistor_rules" model="ir.ui.view">
+        <field name="name">transistor.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">transistor.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                    </group>
+                    <group>
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="attr_v19" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_transistor_rules" model="ir.ui.view">
+        <field name="name">transistor.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">transistor.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_mosfet_rules" model="ir.ui.view">
+        <field name="name">mosfet.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">mosfet.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                    </group>
+                    <group>
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_mosfet_rules" model="ir.ui.view">
+        <field name="name">mosfet.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">mosfet.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_capacitance_rules" model="ir.ui.view">
+        <field name="name">capacitance.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">capacitance.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                    </group>
+                    <group>
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_capacitance_rules" model="ir.ui.view">
+        <field name="name">capacitance.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">capacitance.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_resistance_rules" model="ir.ui.view">
+        <field name="name">resistance.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">resistance.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                    </group>
+                    <group>
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_resistance_rules" model="ir.ui.view">
+        <field name="name">resistance.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">resistance.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_inductance_rules" model="ir.ui.view">
+        <field name="name">inductance.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">inductance.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                    </group>
+                    <group>
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_inductance_rules" model="ir.ui.view">
+        <field name="name">inductance.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">inductance.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_insurance_rules" model="ir.ui.view">
+        <field name="name">insurance.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">insurance.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                    </group>
+                    <group>
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_insurance_rules" model="ir.ui.view">
+        <field name="name">insurance.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">insurance.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_connectors_rules" model="ir.ui.view">
+        <field name="name">connectors.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">connectors.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                    </group>
+                    <group>
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_connectors_rules" model="ir.ui.view">
+        <field name="name">connectors.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">connectors.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_relay_rules" model="ir.ui.view">
+        <field name="name">relay.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">relay.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                    </group>
+                    <group>
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="attr_v19" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_relay_rules" model="ir.ui.view">
+        <field name="name">relay.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">relay.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_converter_rules" model="ir.ui.view">
+        <field name="name">converter.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">converter.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                    </group>
+                    <group>
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_converter_rules" model="ir.ui.view">
+        <field name="name">converter.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">converter.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_crystal_rules" model="ir.ui.view">
+        <field name="name">crystal.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">crystal.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="attachment_image_preview" type="object" class="oe_stat_button" icon="fa-image">
+                        <div class="o_stat_info">
+                            <span class="o_stat_text">附件管理</span>
+                        </div>
+                    </button>
+                </div>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                    </group>
+                    <group>
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="attr_v15" />
+                        <field name="attr_v16" />
+                        <field name="attr_v17" />
+                        <field name="attr_v18" />
+                        <field name="attr_v19" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_crystal_rules" model="ir.ui.view">
+        <field name="name">crystal.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">crystal.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_pcba_rules" model="ir.ui.view">
+        <field name="name">pcba.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">pcba.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v2" />
+                        <field name="attr_v3" />
+                    </group>
+                    <group>
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="file_1" filename="filename_1" />
+                        <field name="filename_1" invisible="1" />
+                    </group>
+                    <notebook colspan="4">
+                        <page string="图片">
+                            <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [600, 500]}"/>
+                        </page>
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_pcba_rules" model="ir.ui.view">
+        <field name="name">pcba.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">pcba.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_machine_rules" model="ir.ui.view">
+        <field name="name">machine.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">machine.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_s1" />
+                        <field name="attr_v1" />
+                        <field name="attr_v2" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v9" />
+                    </group>
+                    <group>
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v8" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_machine_rules" model="ir.ui.view">
+        <field name="name">machine.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">machine.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="attr_s1" />
+                <field name="desc" />
+                <field name="attr_v9" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_mymodule_rules" model="ir.ui.view">
+        <field name="name">mymodule.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">mymodule.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_s1" />
+                        <field name="attr_v1" />
+                        <field name="attr_v2" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v9" />
+                    </group>
+                    <group>
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                        <field name="attr_v8" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_mymodule_rules" model="ir.ui.view">
+        <field name="name">mymodule.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">mymodule.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="attr_s1" />
+                <field name="desc" />
+                <field name="attr_v9" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_material_rules" model="ir.ui.view">
+        <field name="name">material.rules.from</field>
+        <field name="type">form</field>
+        <field name="model">material.rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="3">
+                    <group>
+                        <field name="name" placeholder="编码自动生成，切勿手动输入" />
+                        <field name="cls_one" invisible='1'/>
+                        <field name="cls_second" />
+                        <field name="cls_type" />
+                        <field name="date" widget="date" />
+                        <field name="desc" />
+                    </group>
+                    <group>
+                        <field name="attr_v1" />
+                        <field name="attr_v3" />
+                        <field name="attr_v4" />
+                        <field name="attr_v5" />
+                        <field name="attr_v6" />
+                        <field name="attr_v7" />
+                    </group>
+                    <group>
+                        <field name="attr_v8" />
+                        <field name="attr_v9" />
+                        <field name="attr_v10" />
+                        <field name="attr_v11" />
+                        <field name="attr_v12" />
+                        <field name="attr_v13" />
+                        <field name="attr_v14" />
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/>
+                    </group>
+                    <notebook colspan="3">
+                        <page string="附件" name="attachment_ids">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="其他">
+                            <field name="content"/>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_material_rules" model="ir.ui.view">
+        <field name="name">material.rules.tree</field>
+        <field name="type">tree</field>
+        <field name="model">material.rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <field name="attr_v3" string="关键参数" />
+                <field name="attr_v4" string="物料编码1" />
+                <field name="attr_v5" string="厂商1" />
+                <field name="attr_v6" string="物料编码2" />
+                <field name="attr_v7" string="厂商2" />
+                <field name="attr_v10" string="封装" />
+                <field name="attr_v11" />
+                <field name="attr_v12" string="价格" />
+                <field name="attr_v14" string="状态" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_from_ware_house" model="ir.ui.view">
+        <field name="name">ware.house.from</field>
+        <field name="type">form</field>
+        <field name="model">ware.house</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="3">
+                        <group>
+                            <field name="name" />
+                            <field name="cls_one" />
+                            <field name="cls_second" />
+                            <field name="date" widget="date" />
+                            <field name="desc" />
+                        </group>
+                        <group>
+                            <field name="ware_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_ware_house" model="ir.ui.view">
+        <field name="name">ware.house.tree</field>
+        <field name="type">tree</field>
+        <field name="model">ware.house</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cls_one" />
+                <field name="cls_second" />
+                <field name="date" widget="date" />
+                <field name="desc" />
+                <!--<field name="attr_s1" />-->
+                <!--<field name="attr_s2" />-->
+                <!--<field name="attr_s3" />-->
+                <!--<field name="attr_s4" />-->
+                <!--<field name="attr_s5" />-->
+            </tree>
+        </field>
+    </record>
+
+    <!--搜索信息-->
+    <record id="view_filter_list" model="ir.ui.view">
+        <field name="name">搜索条件</field>
+        <field name="model">ware.house</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="物料编码"/>
+                <field name="cls_one" string="所属一级"/>
+                <field name="cls_second" string="所属二级"/>
+                <field name="desc" string="物料描述" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_manage_warehouse" model="ir.actions.act_window">
+        <field name="name">仓库管理</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ware.house</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_manage_resistance_rules" model="ir.actions.act_window">
+        <field name="name">电阻</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">resistance.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '07'}</field>
+    </record>
+
+    <record id="action_manage_ic_rules" model="ir.actions.act_window">
+        <field name="name">IC</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ic.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_filter_list" />
+        <field name="context">{'default_higher_two_id': '01'}</field>
+    </record>
+
+    <record id="action_manage_frequency_rules" model="ir.actions.act_window">
+        <field name="name">频率振荡器</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">frequency.rules</field>
+        <field name="view_mode">tree,form</field>
+        <!--<field name="domain">[('name', '!=', '')]</field>-->
+        <field name="context">{'default_higher_two_id': '02'}</field>
+    </record>
+
+    <record id="action_manage_semiconductor_rules" model="ir.actions.act_window">
+        <field name="name">半导体二极管</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">semiconductor.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '03'}</field>
+    </record>
+
+    <record id="action_manage_transistor_rules" model="ir.actions.act_window">
+        <field name="name">晶体管</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">transistor.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '04'}</field>
+    </record>
+
+    <record id="action_manage_mosfet_rules" model="ir.actions.act_window">
+        <field name="name">MOSFET</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mosfet.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '05'}</field>
+    </record>
+
+    <record id="action_manage_capacitance_rules" model="ir.actions.act_window">
+        <field name="name">电容</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">capacitance.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_filter_list" />
+        <field name="context">{'default_higher_two_id': '06'}</field>
+    </record>
+
+    <record id="action_manage_inductance_rules" model="ir.actions.act_window">
+        <field name="name">电感</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">inductance.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_filter_list" />
+        <field name="context">{'default_higher_two_id': '08'}</field>
+    </record>
+
+    <record id="action_manage_insurance_rules" model="ir.actions.act_window">
+        <field name="name">保险</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">insurance.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '11'}</field>
+    </record>
+
+    <record id="action_manage_connectors_rules" model="ir.actions.act_window">
+        <field name="name">连接器</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">connectors.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '14'}</field>
+    </record>
+
+    <record id="action_manage_relay_rules" model="ir.actions.act_window">
+        <field name="name">继电器</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">relay.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '67'}</field>
+    </record>
+
+    <record id="action_manage_converter_rules" model="ir.actions.act_window">
+        <field name="name">变压器</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">converter.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '68'}</field>
+    </record>
+
+    <record id="action_manage_crystal_rules" model="ir.actions.act_window">
+        <field name="name">晶体</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crystal.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '69'}</field>
+    </record>
+
+    <record id="action_manage_pcba_rules" model="ir.actions.act_window">
+        <field name="name">PCBA</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">pcba.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '03'}</field>
+    </record>
+
+    <record id="action_manage_machine_rules" model="ir.actions.act_window">
+        <field name="name">整机</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">machine.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '01'}</field>
+    </record>
+
+    <record id="action_manage_mymodule_rules" model="ir.actions.act_window">
+        <field name="name">模块</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mymodule.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_higher_two_id': '02'}</field>
+    </record>
+
+
+
+    <menuitem name="编码管理" id="menu_manage" />
+
+    <menuitem name="完成品" id="menu_manage_finished" parent="menu_manage" />
+    <menuitem name="整机" id="menu_manage_finished_1" parent="menu_manage_finished" sequence="1000" action="action_manage_machine_rules"/>
+    <menuitem name="模块" id="menu_manage_finished_2" parent="menu_manage_finished" sequence="1000" action="action_manage_mymodule_rules"/>
+
+    <menuitem name="半成品" id="menu_manage_semi_finished" parent="menu_manage" />
+    <menuitem name="PCBA" id="menu_manage_semi_finished_3" parent="menu_manage_semi_finished" sequence="1000" action="action_manage_pcba_rules"/>
+
+    <menuitem name="原材料" id="menu_manage_raw_materials" parent="menu_manage" />
+    <menuitem name="IC" id="menu_manage_raw_materials_1" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_ic_rules"/>
+    <menuitem name="频率振荡器" id="menu_manage_raw_materials_2" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_frequency_rules"/>
+    <menuitem name="半导体二极管" id="menu_manage_raw_materials_3" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_semiconductor_rules"/>
+    <menuitem name="晶体管" id="menu_manage_raw_materials_4" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_transistor_rules"/>
+    <menuitem name="MOSFET" id="menu_manage_raw_materials_5" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_mosfet_rules"/>
+    <menuitem name="电容" id="menu_manage_raw_materials_6" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_capacitance_rules"/>
+    <menuitem name="电阻" id="menu_manage_raw_materials_7" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_resistance_rules"/>
+    <menuitem name="电感" id="menu_manage_raw_materials_8" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_inductance_rules"/>
+    <menuitem name="保险" id="menu_manage_raw_materials_11" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_insurance_rules"/>
+    <menuitem name="连接器" id="menu_manage_raw_materials_14" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_connectors_rules"/>
+    <menuitem name="继电器" id="menu_manage_raw_materials_67" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_relay_rules"/>
+    <menuitem name="变压器" id="menu_manage_raw_materials_68" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_converter_rules"/>
+    <menuitem name="晶体" id="menu_manage_raw_materials_69" parent="menu_manage_raw_materials" sequence="1000" action="action_manage_crystal_rules"/>
+
+    <menuitem name="仓库管理" id="menu_manage_warehouse" parent="menu_manage" />
+    <menuitem name="仓库管理" id="menu_manage_warehouse_list" parent="menu_manage_warehouse" sequence="1000" action="action_manage_warehouse"/>
+
+</odoo>

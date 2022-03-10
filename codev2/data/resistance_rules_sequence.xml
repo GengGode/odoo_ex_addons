@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="seq_resistance_rules_sequence" model="ir.sequence">
+        <field name="name">resistance.rules</field>
+        <field name="code">resistance.rules</field>
+        <!--<field name="prefix"></field>-->
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_ic_rules_sequence" model="ir.sequence">
+        <field name="name">ic.rules</field>
+        <field name="code">ic.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_frequency_rules_sequence" model="ir.sequence">
+        <field name="name">frequency.rules</field>
+        <field name="code">frequency.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_semiconductor_rules_sequence" model="ir.sequence">
+        <field name="name">semiconductor.rules</field>
+        <field name="code">semiconductor.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_transistor_rules_sequence" model="ir.sequence">
+        <field name="name">transistor.rules</field>
+        <field name="code">transistor.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_mosfet_rules_sequence" model="ir.sequence">
+        <field name="name">mosfet.rules</field>
+        <field name="code">mosfet.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_capacitance_rules_sequence" model="ir.sequence">
+        <field name="name">capacitance.rules</field>
+        <field name="code">capacitance.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_inductance_rules_sequence" model="ir.sequence">
+        <field name="name">inductance.rules</field>
+        <field name="code">inductance.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_insurance_rules_sequence" model="ir.sequence">
+        <field name="name">insurance.rules</field>
+        <field name="code">insurance.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_connectors_rules_sequence" model="ir.sequence">
+        <field name="name">connectors.rules</field>
+        <field name="code">connectors.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_relay_rules_sequence" model="ir.sequence">
+        <field name="name">relay.rules</field>
+        <field name="code">relay.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_converter_rules_sequence" model="ir.sequence">
+        <field name="name">converter.rules</field>
+        <field name="code">converter.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_crystal_rules_sequence" model="ir.sequence">
+        <field name="name">crystal.rules</field>
+        <field name="code">crystal.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_pcba_rules_sequence" model="ir.sequence">
+        <field name="name">pcba.rules</field>
+        <field name="code">pcba.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_machine_rules_sequence" model="ir.sequence">
+        <field name="name">machine.rules</field>
+        <field name="code">machine.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_mymodule_rules_sequence" model="ir.sequence">
+        <field name="name">mymodule.rules</field>
+        <field name="code">mymodule.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_board_rules_sequence" model="ir.sequence">
+        <field name="name">board.rules</field>
+        <field name="code">board.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_parts_rules_sequence" model="ir.sequence">
+        <field name="name">parts.rules</field>
+        <field name="code">parts.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_outsourcing_rules_sequence" model="ir.sequence">
+        <field name="name">outsourcing.rules</field>
+        <field name="code">outsourcing.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_otherwise_rules_sequence" model="ir.sequence">
+        <field name="name">otherwise.rules</field>
+        <field name="code">otherwise.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_os_rules_sequence" model="ir.sequence">
+        <field name="name">os.rules</field>
+        <field name="code">os.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_applications_rules_sequence" model="ir.sequence">
+        <field name="name">applications.rules</field>
+        <field name="code">applications.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_fpga_rules_sequence" model="ir.sequence">
+        <field name="name">fpga.rules</field>
+        <field name="code">fpga.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_firmware_rules_sequence" model="ir.sequence">
+        <field name="name">firmware.rules</field>
+        <field name="code">firmware.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_bios_rules_sequence" model="ir.sequence">
+        <field name="name">bios.rules</field>
+        <field name="code">bios.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_structure_rules_sequence" model="ir.sequence">
+        <field name="name">structure.rules</field>
+        <field name="code">structure.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_material_rules_sequence" model="ir.sequence">
+        <field name="name">material.rules</field>
+        <field name="code">material.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_othermaterial_rules_sequence" model="ir.sequence">
+        <field name="name">othermaterial.rules</field>
+        <field name="code">othermaterial.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_structuretype_rules_sequence" model="ir.sequence">
+        <field name="name">structuretype.rules</field>
+        <field name="code">structuretype.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_battery_rules_sequence" model="ir.sequence">
+        <field name="name">battery.rules</field>
+        <field name="code">battery.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_package_rules_sequence" model="ir.sequence">
+        <field name="name">package.rules</field>
+        <field name="code">package.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_stickers_rules_sequence" model="ir.sequence">
+        <field name="name">stickers.rules</field>
+        <field name="code">stickers.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_anothermarthafan_rules_sequence" model="ir.sequence">
+        <field name="name">anothermarthafan.rules</field>
+        <field name="code">anothermarthafan.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_tjump_rules_sequence" model="ir.sequence">
+        <field name="name">tjump.rules</field>
+        <field name="code">tjump.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_lcd_rules_sequence" model="ir.sequence">
+        <field name="name">lcd.rules</field>
+        <field name="code">lcd.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_llv_rules_sequence" model="ir.sequence">
+        <field name="name">llv.rules</field>
+        <field name="code">llv.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_filetype_rules_sequence" model="ir.sequence">
+        <field name="name">filetype.rules</field>
+        <field name="code">filetype.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <record id="seq_pcbplate_rules_sequence" model="ir.sequence">
+        <field name="name">pcbplate.rules</field>
+        <field name="code">pcbplate.rules</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+</odoo>
